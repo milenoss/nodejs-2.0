@@ -11,8 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node src/app.js"
+    "start":"node src/app.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }
