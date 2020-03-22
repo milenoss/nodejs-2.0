@@ -8,7 +8,6 @@ const forecast = require('./utils/forecast')
 
 // const port = process.env.PORT || 3000
 
-const app = express() 
 const port = process.env.PORT || 3000
 
 
@@ -77,16 +76,6 @@ app.get('/weather',(req, res) => {
 })
 
 
-app.get('/help/*', (req, res) => { 
-    res.render('404', { 
-        title: '404', 
-        name: 'Milen Khanal',
-        errorMessage: 'Help article not found'
-
-    })
-})
-
-
 
 
 app.get('/products',(req, res) => { 
@@ -101,6 +90,20 @@ app.get('/products',(req, res) => {
     })
 })
 
+
+app.get('/help/*', (req, res) => { 
+    res.render('404', { 
+        title: '404', 
+        name: 'Milen Khanal',
+        errorMessage: 'Help article not found'
+
+    })
+})
+
+
+
+
+
 app.get('*', (req, res) => { 
     res.render('404', { 
         title: '404', 
@@ -113,5 +116,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, ()=> { 
-    console.log('Server is up on port 3000')
+    console.log(`Server is up on port ${port}`)
 })
